@@ -1,9 +1,8 @@
-// Write your package code here!
-// Template.highlight.onRendered(function () {
-//   this.$('pre code').each(function(i, block) {
-//     hljs.highlightBlock(block);
-//   });
-// });
+Template.highlight.onRendered(function () {
+  this.$('pre code').each(function(i, block) {
+    hljs.highlightBlock(block);
+  });
+});
 
 Template.highlightThemeLink.helpers({
   link: function () {
