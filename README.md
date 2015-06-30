@@ -8,81 +8,95 @@ meteor add yasinuslu:quick-highlightjs
 
 Usage:
 
-```html
+```handlebars
 {{#highlight}}
-<code class="lang-js">
-console.log('test');
-</code>
+  <code class="lang-js">
+    console.log('test');
+  </code>
 {{/highlight}}
 ```
+
+Or with `perak:markdown` (remove all backslashes in following code)
+
+```handlebars
+{{#highlight}}
+{{#markdown}}
+# test
+
+\```js
+console.log('test');
+\```
+
+{{/markdown}}
+{{/highlight}}
 ```
 
-Themes: 
-
+quick-hightlightjs uses `default` theme from highlightjs but you can change that by calling this method
 ```js
-[
-    'styles/agate.css',
-    'styles/androidstudio.css',
-    'styles/arta.css',
-    'styles/ascetic.css',
-    'styles/atelier-cave.dark.css',
-    'styles/atelier-cave.light.css',
-    'styles/atelier-dune.dark.css',
-    'styles/atelier-dune.light.css',
-    'styles/atelier-estuary.dark.css',
-    'styles/atelier-estuary.light.css',
-    'styles/atelier-forest.dark.css',
-    'styles/atelier-forest.light.css',
-    'styles/atelier-heath.dark.css',
-    'styles/atelier-heath.light.css',
-    'styles/atelier-lakeside.dark.css',
-    'styles/atelier-lakeside.light.css',
-    'styles/atelier-plateau.dark.css',
-    'styles/atelier-plateau.light.css',
-    'styles/atelier-savanna.dark.css',
-    'styles/atelier-savanna.light.css',
-    'styles/atelier-seaside.dark.css',
-    'styles/atelier-seaside.light.css',
-    'styles/atelier-sulphurpool.dark.css',
-    'styles/atelier-sulphurpool.light.css',
-    'styles/brown_paper.css',
-    'styles/brown_papersq.png',
-    'styles/codepen-embed.css',
-    'styles/color-brewer.css',
-    'styles/dark.css',
-    'styles/darkula.css',
-    'styles/default.css',
-    'styles/docco.css',
-    'styles/far.css',
-    'styles/foundation.css',
-    'styles/github.css',
-    'styles/hybrid.css',
-    'styles/idea.css',
-    'styles/ir_black.css',
-    'styles/kimbie.dark.css',
-    'styles/magula.css',
-    'styles/mono-blue.css',
-    'styles/monokai.css',
-    'styles/monokai_sublime.css',
-    'styles/obsidian.css',
-    'styles/paraiso.dark.css',
-    'styles/paraiso.light.css',
-    'styles/pojoaque.css',
-    'styles/pojoaque.jpg',
-    'styles/railscasts.css',
-    'styles/rainbow.css',
-    'styles/school_book.css',
-    'styles/school_book.png',
-    'styles/solarized_dark.css',
-    'styles/solarized_light.css',
-    'styles/sunburst.css',
-    'styles/tomorrow-night-blue.css',
-    'styles/tomorrow-night-bright.css',
-    'styles/tomorrow-night-eighties.css',
-    'styles/tomorrow-night.css',
-    'styles/tomorrow.css',
-    'styles/vs.css',
-    'styles/xcode.css',
-    'styles/zenburn.css'
-  ];
+quickHighlightJS.set("theme", "monokai");
+```
+
+Complete theme list:
+
+```
+agate
+androidstudio
+arta
+ascetic
+atelier-cave.dark
+atelier-cave.light
+atelier-dune.dark
+atelier-dune.light
+atelier-estuary.dark
+atelier-estuary.light
+atelier-forest.dark
+atelier-forest.light
+atelier-heath.dark
+atelier-heath.light
+atelier-lakeside.dark
+atelier-lakeside.light
+atelier-plateau.dark
+atelier-plateau.light
+atelier-savanna.dark
+atelier-savanna.light
+atelier-seaside.dark
+atelier-seaside.light
+atelier-sulphurpool.dark
+atelier-sulphurpool.light
+brown_paper
+codepen-embed
+color-brewer
+dark
+darkula
+default
+docco
+far
+foundation
+github
+hybrid
+idea
+ir_black
+kimbie.dark
+magula
+mono-blue
+monokai
+monokai_sublime
+obsidian
+paraiso.dark
+paraiso.light
+pojoaque
+railscasts
+rainbow
+school_book
+solarized_dark
+solarized_light
+sunburst
+tomorrow-night-blue
+tomorrow-night-bright
+tomorrow-night-eighties
+tomorrow-night
+tomorrow
+vs
+xcode
+zenburn
 ```
