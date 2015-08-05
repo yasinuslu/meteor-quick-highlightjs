@@ -10,9 +10,11 @@ Usage:
 
 ```handlebars
 {{#highlight}}
-  <code class="lang-js">
-    console.log('test');
-  </code>
+  <pre>
+    <code class="lang-js">
+      console.log('test');
+    </code>
+  </pre>
 {{/highlight}}
 ```
 
